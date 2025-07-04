@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Actor&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Actor&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sanchez:ital@0;1&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #55d6c2;
+  --color-blue: #3066be;
+  --color-green: #03cc17;
+  --font-roboto: "Roboto", sans-serif;
+  --font-sanchez: "Sanchez", serif;
+}
+
+@layer utilities {
+  h1 {
+    @apply text-4xl font-bold text-center font-roboto;
+  }
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "sanchez", sans-serif;
+}
