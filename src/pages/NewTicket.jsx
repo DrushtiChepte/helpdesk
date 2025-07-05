@@ -84,7 +84,7 @@ const NewTicket = () => {
             </div>
           </div>
           <div>
-            <button className="bg-primary px-15 py-2 rounded-lg">submit</button>
+            <button type="button" className="bg-primary px-15 py-2 rounded-lg">submit</button>
           </div>
         </div>
       </form>
