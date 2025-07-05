@@ -1,7 +1,40 @@
 export const sidebarLinks = [
-  { imgUrl: "/DashboardLayout.png", label: "Dashboard", path: "/dashboard" },
-  { imgUrl: "/newticket.png", label: "New Ticket", path: "/new-ticket" },
-  { imgUrl: "/myticket.png", label: "My Tickets", path: "/my-tickets" },
+  {
+    imgUrl: "/DashboardLayout.png",
+    label: "Dashboard",
+    path: "/dashboard",
+    role: "common",
+  },
+  {
+    imgUrl: "/newticket.png",
+    label: "New Ticket",
+    path: "/new-ticket",
+    role: "user",
+  },
+  {
+    imgUrl: "/myticket.png",
+    label: "My Tickets",
+    path: "/my-tickets",
+    role: "user",
+  },
+  {
+    imgUrl: "/database.svg",
+    label: "Database",
+    path: null,
+    role: "admin",
+  },
+  {
+    imgUrl: "/settings.svg",
+    label: "Setting",
+    path: null,
+    role: "admin",
+  },
+  {
+    imgUrl: "/userlog.svg",
+    label: "Users Log",
+    path: null,
+    role: "admin",
+  },
 ];
 export const topBarLinks = [
   { imgUrl: "/notification.svg", label: "Notifications" },

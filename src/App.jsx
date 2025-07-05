@@ -7,6 +7,7 @@ import SignIn from "./pages/SignIn";
 import Layout from "./components/Layout";
 import MyTickets from "./pages/MyTickets";
 import NewTicket from "./pages/NewTicket";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 function App() {
   return (
@@ -16,9 +17,30 @@ function App() {
         <Route path="/Signup" element={<SignUp />} />
 
         <Route element={<Layout />}>
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/new-ticket" element={<NewTicket />} />
-          <Route path="/my-tickets" element={<MyTickets />} />
+          <Route
+            path="/dashboard"
+            element={
+              <ProtectedRoute allowedRoles={["admin", "user"]}>
+                <Dashboard />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/new-ticket"
+            element={
+              <ProtectedRoute allowedRoles={["admin", "user"]}>
+                <NewTicket />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/my-tickets"
+            element={
+              <ProtectedRoute allowedRoles={["admin", "user"]}>
+                <MyTickets />
+              </ProtectedRoute>
+            }
+          />
         </Route>
       </Routes>
     </Router>
